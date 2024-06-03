@@ -39,6 +39,13 @@ CREATE TABLE publicationtoverify (
     eslora DECIMAL(10, 2) NOT NULL
 );
 
+  CREATE TABLE offer (
+      idOffer INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      email VARCHAR(50) NOT NULL,
+      idPublication INT NOT NULL,
+      description TEXT NOT NULL
+  );
+
 -- to show all tables
 show tables;
 

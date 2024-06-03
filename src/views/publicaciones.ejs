@@ -13,6 +13,9 @@
               <% if (roleCookie=="admin" ) { %>
                 <td>Actions</td>
                 <% } %>
+                  <% if (roleCookie=="user" ) { %>
+                    <td>Ofertar</td>
+                    <% } %>
             </tr>
           </thead>
           <tbody>
@@ -38,6 +41,14 @@
                       </a>
                     </td>
                     <% } %>
+                      <% if (roleCookie=="user" ) { %>
+                        <td class="d-flex gap-2">
+                          <a href="/makeOffer/<%= publicaciones[i].idPublication %>" class="btn btn-info">
+                            Ofertar
+                          </a>
+                        </td>
+                        <% } %>
+
                 </tr>
                 <% } %>
                   <% } %>
