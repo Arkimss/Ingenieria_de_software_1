@@ -40,6 +40,7 @@ CREATE TABLE publicationtoverify (
     eslora DECIMAL(10, 2) NOT NULL
 );
 
+<<<<<<< HEAD
 CREATE TABLE offer (
     idOffer INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     idUser INT NOT NULL,
@@ -81,6 +82,15 @@ CREATE TABLE transactionSuccess(
     idTransaction INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 
 );
+=======
+  CREATE TABLE offer (
+      idOffer INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      email VARCHAR(50) NOT NULL,
+      idPublication INT NOT NULL,
+      description TEXT NOT NULL
+  );
+
+>>>>>>> 6eee6664b46eed1ff56ccfcd70a3c3b34f9eff00
 -- to show all tables
 show tables;
 

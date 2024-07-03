@@ -42,6 +42,10 @@ export const verifyPublication = async (req, res) => {
     const [user] = await pool.query("SELECT * FROM user WHERE email = ?", [app.locals.emailCookie]);
     if (user[0].role === "admin") {
       const idPuerto = user[0].idPuerto;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6eee6664b46eed1ff56ccfcd70a3c3b34f9eff00
       const [rows] = await pool.query("SELECT * FROM publicationtoverify WHERE idPuerto = ?", [idPuerto]);
       res.render("renderpublicationtoverify", { publications: rows });
     }

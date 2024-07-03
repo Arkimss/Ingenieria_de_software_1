@@ -3,10 +3,14 @@ import path from "path";
 import morgan from "morgan";
 import userRoutes from "./routes/user.routes.js";
 import publicacionRoutes from "./routes/publicacion.routes.js";
+<<<<<<< HEAD
 import offerRoutes from "./routes/offer.routes.js";
 import transactionsRoutes from "./routes/transactions.routes.js";
 import notificationRoutes from "./routes/notification.routes.js";
 
+=======
+import ofertasRoutes from "./routes/ofertas.routes.js";
+>>>>>>> 6eee6664b46eed1ff56ccfcd70a3c3b34f9eff00
 import { fileURLToPath } from "url";
 
 const app = express();
@@ -29,9 +33,13 @@ app.locals.roleCookie = "";
 // routes
 app.use(userRoutes);
 app.use(publicacionRoutes);
+<<<<<<< HEAD
 app.use(offerRoutes);
 app.use(transactionsRoutes);
 app.use(notificationRoutes);
+=======
+app.use(ofertasRoutes);
+>>>>>>> 6eee6664b46eed1ff56ccfcd70a3c3b34f9eff00
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
