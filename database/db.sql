@@ -26,7 +26,8 @@ CREATE TABLE publication (
     description TEXT NOT NULL,
     plate VARCHAR(255) NOT NULL,
     manga DECIMAL(10, 2) NOT NULL,
-    eslora DECIMAL(10, 2) NOT NULL
+    eslora DECIMAL(10, 2) NOT NULL,
+    deleted VARCHAR(1) DEFAULT "F"
 );
 
 CREATE TABLE publicationtoverify (
@@ -39,6 +40,47 @@ CREATE TABLE publicationtoverify (
     eslora DECIMAL(10, 2) NOT NULL
 );
 
+CREATE TABLE offer (
+    idOffer INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser INT NOT NULL,
+    idPublication INT NOT NULL,
+    idVehicle INT NOT NULL
+);
+
+CREATE TABLE vehicle (
+    idVehicle INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser INT NOT NULL,
+    matricula VARCHAR(15) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    año VARCHAR(6) NOT NULL,
+    kilometros VARCHAR(20) NOT NULL,
+    description TEXT
+);
+
+CREATE TABLE offertoverify (
+    idOfferToVerify INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser INT NOT NULL,
+    idPublication INT NOT NULL,
+    idVehicle INT NOT NULL
+);
+
+CREATE TABLE notification(
+    idNotification INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser INT(6) NOT NULL,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE favouritePublication(
+    idFavourite INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    idUser INT NOT NULL,
+    idPublication INT NOT NULL,
+);
+
+CREATE TABLE transactionSuccess(
+    idTransaction INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+
+);
 -- to show all tables
 show tables;
 
